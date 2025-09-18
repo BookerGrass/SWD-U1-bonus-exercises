@@ -32,10 +32,18 @@ const revStrAnonShort = str => str.split('').reverse().join('');
 console.log(revStrAnonShort('yam'));
 
 // YOUR TURN! Practice below.
-
+const arr = ["dog", "Cat", "Fish"]
 // TODO: Use arrow syntax to create an anonymous function, stored as a constant
 // The function should accept an array and return a random element
 // Multiple lines of code OK
+const getRandomElement = (arr) => {
+	if (!Array.isArray(arr)) {
+		return undefined;
+
+	}
+	let randomIndex = Math.floor(Math.random() * (arr.length));
+	return arr[randomIndex];
+}
 
 // Create an array of several elements as mock data
 

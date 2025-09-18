@@ -1,7 +1,7 @@
 /** Higher-order functions **/
 
 // Test Data
-export let numberArray = [29.45, 40.24, 13.72, 75.01, 68.84, 14.33, 39.87];
+/*export let numberArray = [29.45, 40.24, 13.72, 75.01, 68.84, 14.33, 39.87];
 
 // EXAMPLE of .map()
 // Create a new array with each number rounded
@@ -47,7 +47,7 @@ console.log(numberArray);
 
 // Use what you know about accessing values in objects
 
-// Test data
+// Test data*/
 export let fruits = [
 	{
 		name: 'Granny Smith apple',
@@ -67,10 +67,10 @@ export let fruits = [
 ];
 
 // TODO: Create a new array of just the names of each fruit and print it
-
+let justNames = fruits.map(n => n.name );
 
 // TODO: Iterate over the test data and print a sentence for each fruit using all three of its properties
-
+let sentenceMessage = fruits.forEach(fruit => console.log(`Name is ${fruit.name} and color is ${fruit.color} and diameter is ${fruit.diameter} diameters`));
 
 // TODO: Create and print a new array of just the apples in the test data
 
@@ -83,8 +83,13 @@ export let fruits = [
 
 // TODO: Sort the array of fruit by diameter, largest to smallest
 // Print the original array to show it has been sorted
+let sortedDiameter = fruits.sort((a, b) => a.diameter - b.diameter);
 
 
 // For the 06-importExport.js exercise, the export keyword has been
 // applied to numberArray and fruits.
 // No need to put anything here; the object is created behind-the-scenes!
+console.log(justNames);
+console.log(sentenceMessage);
+console.log(sortedDiameter);
+
